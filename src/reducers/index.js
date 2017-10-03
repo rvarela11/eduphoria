@@ -1,22 +1,26 @@
 const initialState = {
-  messages: ["Howdy"]
+  apiData: [],
+  currentFirstIndex: 0,
+  currentLastIndex: 4
 };
 
 export function reducer (state = initialState, action) {
   switch (action.type) {
-    case 'ADDMESSAGE':
-    return {
-          messages: state.messages.concat(action.message),
-        }
-    case 'DELETEMESSAGE':
-    return {
-      messages: [
-        ...state.messages.slice(0, action.index),
-        ...state.messages.slice(
-          action.index + 1, state.messages.length
-        ),
-      ],
-    };
+    case 'AddTopTenSongs':
+        return {
+          ...state,
+          apiData: action.data
+        };
+    case 'ArrowClickedFirst':
+        return {
+          ...state,
+          currentFirstIndex: action.data
+        };
+    case 'ArrowClickedLast':
+        return {
+          ...state,
+          currentLastIndex: action.data
+        };
     default:
         return state;
   }

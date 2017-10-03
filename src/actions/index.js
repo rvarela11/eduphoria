@@ -1,15 +1,23 @@
-export const ADDMESSAGE = 'ADDMESSAGE';
-export function addMessage (message) {
+export const AddTopTenSongs = 'AddTopTenSongs';
+export function addTopTenSongs (data) {
   return {
-    type: ADDMESSAGE,
-    message
+    type: AddTopTenSongs,
+    data
   }
 }
 
-export const DELETEMESSAGE = 'DELETEMESSAGE';
-export function deleteMessage (index) {
+export const ArrowClickedFirst = 'ArrowClickedFirst';
+export function arrowClickedFirst (data) {
   return {
-    type: DELETEMESSAGE,
-    index
+    type: ArrowClickedFirst,
+    data
+  }
+}
+
+export const ArrowClickedLast = 'ArrowClickedLast';
+export function arrowClickedLast (data) {
+  return {
+    type: ArrowClickedLast,
+    data
   }
 }
