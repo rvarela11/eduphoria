@@ -1,0 +1,66 @@
+/*------------------------------ General ------------------------------*/
+
+.textWhite {
+  color: #fff;
+}
+
+.backgroundBlack {
+  background-color: #000;
+}
+
+/*------------------------------ App.js ------------------------------*/
+
+.mainContainer {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/*------------------------------ Box.js ------------------------------*/
+
+.box {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.box__artist {
+  margin-top: 0;
+  padding: 2px;
+  display: flex;
+  flex: 8;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.box__title {
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  text-align: center;
+}
+.box__image {
+  width: 100%;
+}
+
+/*------------------------------ Arrows.js ------------------------------*/
+
+.arrowButton {
+  background: transparent;
+  border: 0;
+  outline:0;
+  cursor: pointer;
+}
+.arrowButton:hover polyline,
+.arrowButton:focus polyline {
+  stroke-width: 3;
+}
+.arrowButton:active polyline,
+.arrowButton:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+polyline {
+  transition: all 250ms ease-in-out;
+}
